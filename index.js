@@ -13,10 +13,7 @@ app.use(express.json({limit: "25mb"}));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}))
-app.use(cors({
-    origin: 'https://lebaba-frontend-final.vercel.app',
-    credentials: true
-}))
+app.use(cors())
 
 // image upload 
 const uploadImage = require("./src/utils/uploadImage")
